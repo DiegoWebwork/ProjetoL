@@ -2,7 +2,7 @@ import {View, Button, Text, Image, TextInput, TouchableOpacity, ScrollView, Aler
 import styles from '../static/styles';
 import {useState} from 'react';
 
-function SignIn() {
+function SignIn(props) {
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('../assets/Tela.jpeg')} />
@@ -12,6 +12,8 @@ function SignIn() {
       <TextInput style={styles.input} placeholder="Senha" secureTextEntry={true}/>
       <View style={{ height: 20 }} />
       <Button title="Cadastrar" onPress={() => {}} />
+      <View style={{ height: 20 }} />
+      <Button title="Já tem uma conta?" onPress={() => props.navigation.navigate('Home')} />
     </View>
   );
 }
