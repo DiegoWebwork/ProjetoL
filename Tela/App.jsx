@@ -1,24 +1,24 @@
 import {View, Button, Text, Image, TextInput, TouchableOpacity, ScrollView, Alert} from 'react-native';
-import styles from './styles';
+import Home from './Screens/Home.jsx';
+import User from './Screens/User.jsx';
+import SignIn from './Screens/Sign.jsx';
 import {useState} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 function App() {
-  return (
-    <View style={styles.container}>
-      <Image style={styles.logo} source={require('./assets/Tela.jpeg')} />
-      <Text style = {styles.text_header}>Chibi Master</Text>
-      <TextInput style={styles.input} placeholder="Name" />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry={true}
-      />
-      <Button title="Entrar" onPress={() => {}} />
-      <View style={{ height: 20 }} />
-      <Button title="Cadastrar" onPress={() => {}} />
-    </View>
-  );
+
+    const Stack = createNativeStackNavigator();
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName = "Home">
+                <Stack.Screen name="Home" component={Home}/>
+                <Stack.Screen name="Sign-in" component={SignIn}/>
+                <Stack.Screen name="User" component={User}/>
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
 
 export default App;
