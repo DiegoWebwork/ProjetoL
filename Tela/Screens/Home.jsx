@@ -8,10 +8,10 @@ function Home(props) {
     <View style={styles.container}>
       <Image style={styles.logo} source={require('../assets/Tela.jpeg')} />
       <Text style = {styles.text_header}>Chibi Masters</Text>
-      <TextInput style={styles.input} placeholder="Name" />
+      <TextInput style={styles.input} placeholder="Nome" />
       <TextInput
         style={styles.input}
-        placeholder="Password"
+        placeholder="Senha"
         secureTextEntry={true}
       />
       <Button title="Entrar" onPress={() => {}} />

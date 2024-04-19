@@ -13,8 +13,21 @@ function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName = "Home">
-                <Stack.Screen name="Home" component={Home}/>
-                <Stack.Screen name="Sign-in" component={SignIn}/>
+                <Stack.Screen name="Home" component={Home} options ={{
+                    title:"Bem Vindo",
+                    headerStyle:{
+                        backgroundColor: "#17A9FD"
+                    },
+                    headerTintColor:"#fff",
+                    headerTitleAlign:"center"
+                }}/>
+                <Stack.Screen name="Sign-in" component={SignIn} options ={{
+                    title:"Vamos começar",
+                    headerStyle:{
+                        backgroundColor: "#17A9FD"
+                    },
+                    headerTintColor:"#fff",
+                    headerTitleAlign:"center"}}/>
                 <Stack.Screen name="User" component={User}/>
             </Stack.Navigator>
         </NavigationContainer>
