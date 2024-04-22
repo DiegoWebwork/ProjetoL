@@ -25,8 +25,53 @@ app.get("/", (req, res) => {
   res.send({ status: "Started" });
 });
 
+app.post("/register", async (req, res) => {
+  const { name, email, password, userType } = req.body;
+  console.log(req.body);
 
+  const oldUser = await User.findOne({ email: email });
 
+  if (oldUser) {
+    return res.send({ data: "Usuario ja existe no banco de dados!!" });
+  }
+  const encryptedPassword = await bcrypt.hash(password, 10);
+
+  try {
+    await User.create({
+      name: name,
+      email: email,
+      password: encryptedPassword,
+      userType,
+    });
+    res.send({ status: "ok", data: "Usuario criado" });
+  } catch (error) {
+    res.send({ status: "error", data: error });
+  }
+});
+
+app.post("/login-user", async (req, res) => {
+  const { email, password } = req.body;
+  console.log(req.body);
+  const oldUser = await User.findOne({ email: email });
+
+  if (!oldUser) {
+    return res.send({ data: "Usuario não consta na base de dados!!" });
+  }
+
+  if (await bcrypt.compare(password, oldUser.password)) {
+    const token = jwt.sign({ email: oldUser.email }, JWT_SECRET);
+    console.log(token);
+    if (res.status(201)) {
+      return res.send({
+        status: "ok",
+        data: token,
+        userType: oldUser.userType,
+      });
+    } else {
+      return res.send({ error: "error" });
+    }
+  }
+});
 
 app.post("/userdata", async (req, res) => {
   const { token } = req.body;
@@ -43,15 +88,17 @@ app.post("/userdata", async (req, res) => {
 });
 
 app.post("/update-user", async (req, res) => {
-  const { name, email, } = req.body;
+  const { name, email, image, gender, profession } = req.body;
   console.log(req.body);
   try {
     await User.updateOne(
       { email: email },
       {
         $set: {
-          name
-          
+          name,
+          image,
+          gender,
+          profession,
         },
       }
     );
@@ -70,9 +117,19 @@ app.get("/get-all-user", async (req, res) => {
   }
 });
 
+app.post("/delete-user",async (req, res) => {
+ const {id}=req.body;
+ try {
+  await User.deleteOne({_id:id});
+  res.send({status:"Ok",data:"User Deleted"});
+ } catch (error) {
+  return res.send({ error: error });
+
+ }
+})
+
 
 
 app.listen(3000, () => {
-  console.log("servidor iniciado.");
+  console.log("Servidor iniciado.");
 });
-  
