@@ -8,8 +8,7 @@
 
 
 # Introdução:
-Esse projeto inicial lida com components e navegação entre paginas, adicionar um metodo de cadastro de usuario e loguin jwt
-
+Esse projeto inicial lida com components e navegação entre paginas, adicionando um metodo de cadastro de usuario e loguin com jwt e senha com hash,
 na pasta backend, tem o arquivo app.js que é onde fica as api endpoint a partir da linha 24
 
 # API ENDPOINTS e ROTAS:
