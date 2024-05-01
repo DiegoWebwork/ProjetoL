@@ -12,47 +12,47 @@ Esse projeto inicial lida com components e navegação entre paginas, adicionar 
 
 na pasta backend, tem o arquivo app.js que é onde fica as api endpoint a partir da linha 24
 
-API ENDPOINTS e ROTAS:
+# API ENDPOINTS e ROTAS:
 
 app.get("/", ...):
   Manipula solicitações GET para o endpoint raiz.
   exemplo:
   http://localhost:3000/
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/s.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/s.png)
 
 app.post("/register", ...):
    Manipula solicitações POST para registrar um novo usuário.
   exemplo:
   http://localhost:3000/register
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/register.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/register.png)
 
 app.post("/login-user", ...):
   Manipula solicitações POST para login de usuário.
   exemplo:
   http://localhost:3000/login-user
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/login.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/login.png)
 
 app.post("/userdata", ...):
   Manipula solicitações POST para recuperar dados do usuário com base no token.
   exemplo:
   http://localhost:3000/userdata
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/userdata.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/userdata.png)
 
 app.post("/update-user", ...):
   Manipula solicitações POST para atualizar informações do usuário.
   exemplo:
   http://localhost:3000/update-user
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/updateuser.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/updateuser.png)
 
 app.get("/get-all-user", ...):
   Manipula solicitações GET para recuperar todos os usuários.
   exemplo:
   http://localhost:3000/get-all-user
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/getall.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/getall.png)
 
 app.post("/delete-user", ...):
   Manipula solicitações POST para excluir um usuário.
   exemplo:
   http://localhost:3000/delete-user
-  ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/delete.png)
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/delete.png)
 
