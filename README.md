@@ -18,6 +18,7 @@ app.get("/", ...):
   Manipula solicitações GET para o endpoint raiz.
   exemplo:
   http://localhost:3000/
+  
 ![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/s.png)
 
 app.post("/register", ...):
