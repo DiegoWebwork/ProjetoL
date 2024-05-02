@@ -18,9 +18,11 @@ mongoose
   .catch((e) => {
     console.log(e);
   });
+//chamando o schema
 require("./UserDetails");
 const User = mongoose.model("UserInfo");
 
+//api de resgistro
 app.get("/", (req, res) => {
   res.send({ status: "Started" });
 });
@@ -49,6 +51,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
+//api de login
 app.post("/login-user", async (req, res) => {
   const { email, password } = req.body;
   console.log(req.body);
@@ -73,6 +76,7 @@ app.post("/login-user", async (req, res) => {
   }
 });
 
+//
 app.post("/userdata", async (req, res) => {
   const { token } = req.body;
   try {
@@ -117,16 +121,15 @@ app.get("/get-all-user", async (req, res) => {
   }
 });
 
-app.post("/delete-user",async (req, res) => {
- const {id}=req.body;
- try {
-  await User.deleteOne({_id:id});
-  res.send({status:"Ok",data:"User Deleted"});
- } catch (error) {
-  return res.send({ error: error });
-
- }
-})
+app.delete("/delete-user", async (req, res) => {
+  const { id } = req.query;
+  try {
+    await User.deleteOne({ _id: id });
+    res.send({ status: "Ok", data: "User deleted" });
+  } catch (error) {
+    return res.status(500).send({ error: error });
+  }
+});
 
 
 

@@ -1,5 +1,6 @@
 import {View, Button, Text, Image, TextInput, TouchableOpacity, ScrollView, Alert} from 'react-native';
 import styles from '../static/styles';
+import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
 import axios from 'axios';
 
@@ -11,7 +12,7 @@ function SignIn(props) {
     const [ password, setPassword] = useState('');
     const [passwordVerify, setPasswordVerify] = useState(false);
 
-
+    const navigation = useNavigation()
     function handleSubmit(){
         const userData = {
             name:name,
@@ -22,6 +23,7 @@ function SignIn(props) {
 
         axios.post("http://10.0.0.5:3000/register", userData)
         .then(res => console.log(res.data)).catch(e => console.log(e));
+        navigation.navigate('Home');
 
     };
     function handleName(e) {
