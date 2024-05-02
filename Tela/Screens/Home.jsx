@@ -16,7 +16,7 @@ function Home(props) {
         };
         axios.post('http://10.0.0.5:3000/login-user', userData).then(res => {
         console.log(res.data);
-        if (res.data.status == 'ok') {navigation.navigate('User');
+        if (res.data.status == 'ok') {navigation.navigate('Sign-in');
         }
         });
 
