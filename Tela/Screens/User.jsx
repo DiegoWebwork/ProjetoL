@@ -11,7 +11,7 @@ function User() {
       <TextInput style={styles.input} placeholder="E-mail" />
       <TextInput style={styles.input} placeholder="Senha" secureTextEntry={true}/>
       <View style={{ height: 20 }} />
-      <Button title="Cadastrar" onPress={() => {}} />
+      <Button title="atualizar informações" onPress={() => {}} />
     </View>
   );
 }
