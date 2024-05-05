@@ -24,7 +24,7 @@ com um terminal aberto na pasta Tela
 
 rode o comando npm install para instalar as dependencias necessarias
 
-rode o comando react-native start para iniciar a aplicação em um emulador android
+rode o comando react-native start para iniciar a aplicação e escolha se ira rodar em um emular android, IOS ou Web
 
 # Introdução:
 Esse projeto inicial lida com components e navegação entre paginas, adicionando um metodo de cadastro de usuario e loguin com jwt e senha com hash,
