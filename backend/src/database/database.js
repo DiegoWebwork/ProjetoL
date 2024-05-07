@@ -1,17 +1,15 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const mongoUrl =
-  "mongodb+srv://dbUser:D5i4e3123-g4o5@cluster0.o6epbot.mongodb.net/";
 
-const JWT_SECRET =
-  "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jdsds039[]]pou89ywe";
-mongoose
-  .connect(mongoUrl)
+mongoose.connect(`mongodb+srv://dbUser:D5i4e3123-g4o5@cluster0.o6epbot.mongodb.net/`)
   .then(() => {
-    console.log("Conectado");
+    console.log('Conexão com o MongoDB realizada');
   })
-  .catch((e) => {
-    console.log(e);
+  .catch((error) => {
+    console.log('Falha de autenticação com o MongoDB');
+    console.log(error);
   });
 
-module.exports = mongoUrl;
+mongoose.Promise = global.Promise;
+
+module.exports = mongoose;

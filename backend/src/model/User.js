@@ -1,4 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('../database/index');
+
+const bcryptjs = require('bcryptjs');
 
 const UserDetailSchema = new mongoose.Schema(
   {
@@ -10,4 +12,11 @@ const UserDetailSchema = new mongoose.Schema(
     collection: "UserInfo",
   }
 );
-mongoose.model("UserInfo", UserDetailSchema);
+UserSchema.pre("save", async function(next){
+    const hash = await bcryptjs.hash(this.password, 10);
+    this.password = hash;
+})
+
+const User = mongoose.model('User', UserSchema);
+
+module.exports = User;
