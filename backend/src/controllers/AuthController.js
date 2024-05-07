@@ -1,4 +1,4 @@
-const UserModel = require('src/models/User');
+const UserModel = require('../model/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth.json');

@@ -1,10 +1,7 @@
-global.__require = function (file) {
-  return require(__dirname + '/' + file)
-}
 const express = require('express');
 const userRoutes = require('./routes/userRoutes');
 const AdminController = require('./controllers/AdminController');
-const authenticateMiddleware = require('./middlewares/authenticate');
+const authenticateMiddleware = require('./middleware/authenticate');
 const app = express();
 
 app.use(express.json());
