@@ -5,7 +5,26 @@
 # Disciplina: Laboratório de Programação de Aplicativos Nativos 8º Periodo
 # Professor: Fabricio Dias
 
+# Como rodar:
+dentro da pasta ProjetoL
 
+cd backend para entrar na pasta do servidor
+
+com um terminal aberto na pasta backend
+
+rode o comando npm install para instalar as dependencias necessarias
+
+rode o comando node app.js para iniciar o servidor
+
+dentro da pasta ProjetoL
+
+cd Tela para entrar na pagina principal da aplicação react-native
+
+com um terminal aberto na pasta Tela
+
+rode o comando npm install para instalar as dependencias necessarias
+
+rode o comando react-native start para iniciar a aplicação e escolha se ira rodar em um emular android, IOS ou Web
 
 # Introdução:
 Esse projeto inicial lida com components e navegação entre paginas, adicionando um metodo de cadastro de usuario e loguin com jwt e senha com hash,
