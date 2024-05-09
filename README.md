@@ -37,7 +37,7 @@ A API usa restapi para autorização
 
 ```
 Usuario - usuario comum.
-
+```
 # API ENDPOINTS e ROTAS:
 
 # app.get("/", ...):
