@@ -23,7 +23,7 @@ Use o npm install dentro da pasta Tela para instalar as dependências do fronten
 npm install 
 ```
 
-## Como usar
+## Como iniciar
 
 ```node
 # na pasta backend nodemon app.js
@@ -31,6 +31,10 @@ npm install
 # na pasta tela react-native app.js
 
 ```
+## frontend login e cadastro
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/l.png)
+
+![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/Captura%20de%20tela%202024-05-09%20045207.png)
 
 ## Authentication
 A API usa restapi para autorização
