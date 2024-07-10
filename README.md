@@ -26,9 +26,9 @@ npm install
 ## Como iniciar
 
 ```node
-# na pasta backend nodemon app.js
+# na pasta friendsbookfront npm start
 
-# na pasta tela react-native app.js
+# na pasta friendsbookback npm start
 
 ```
 
