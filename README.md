@@ -31,65 +31,47 @@ npm install
 # na pasta tela react-native app.js
 
 ```
-## frontend login e cadastro
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/l.png)
-
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/Captura%20de%20tela%202024-05-09%20045207.png)
 
 ## Authentication
 A API usa restapi para autorização
 
 ```
-Usuario - usuario comum.
+Usuario adm - usuario comum.
 ```
 # API ENDPOINTS e ROTAS:
 
 # app.get("/", ...):
   Manipula solicitações GET para o endpoint raiz.
   
-  exemplo:
-  
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/s.png)
+ 
 
 # app.post("/register", ...):
    Manipula solicitações POST para registrar um novo usuário.
   
-  exemplo:
   
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/register.png)
 
 # app.post("/login-user", ...):
   Manipula solicitações POST para login de usuário.
   
-  exemplo:
-  
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/login.png)
+ 
 
 # app.post("/userdata", ...):
   Manipula solicitações POST para recuperar dados do usuário com base no token.
   
-  exemplo:
   
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/userdata.png)
+  
+
 
 # app.post("/update-user", ...):
   Manipula solicitações POST para atualizar informações do usuário.
   
-  exemplo:
   
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/updateuser.png)
 
 # app.get("/get-all-user", ...):
   Manipula solicitações GET para recuperar todos os usuários.
   
-  exemplo:
-  
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/getall.png)
-
+ 
 # app.post("/delete-user", ...):
   Manipula solicitações POST para excluir um usuário.
   
-  exemplo:
-  
-![alt text](https://github.com/DiegoWebwork/ProjetoL/blob/master/images/delete.png)
 
